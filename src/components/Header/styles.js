@@ -37,7 +37,9 @@ export const Menu = styled.menu`
     }
 
     > a:hover {
-        color: ${({ theme }) => theme.COLORS.SALMON};
+        color: ${({ theme }) => theme.COLORS.GREEN};
+        border-bottom: 3px solid ${({ theme }) => theme.COLORS.GREEN} ;
+        padding-bottom: 5px;
     }
     
 `
@@ -58,7 +60,7 @@ export const Icons = styled.button`
         padding: 7px;
 
         &:hover {
-            color: ${({ theme }) => theme.COLORS.SALMON};
+            color: ${({ theme }) => theme.COLORS.GREEN};
         }
     }
 

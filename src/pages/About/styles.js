@@ -24,7 +24,7 @@ export const Container = styled.div`
     > h1 {
         padding: 20px 0 ;
         text-align: center;
-        color: ${({ theme }) => theme.COLORS.ABOUT};
+        color: ${({ theme }) => theme.COLORS.GREEN};
 
     }
 
@@ -38,7 +38,7 @@ export const Subject = styled.div`
     align-items: center;
     flex-wrap: wrap;
     padding: 2rem;
-    background: ${({ theme }) => theme.COLORS.ABOUT};
+    background: ${({ theme }) => theme.COLORS.GREEN};
 
     margin-left: 15px;
 
