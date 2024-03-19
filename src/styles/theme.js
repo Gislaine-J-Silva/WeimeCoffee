@@ -5,6 +5,6 @@ export default {
 
         WHITE: "#F4EDE8",
         BLACK: "#010103",
-        SALMON: "#DB9672",
+        SALMON: "#DB9672"
     }
 };

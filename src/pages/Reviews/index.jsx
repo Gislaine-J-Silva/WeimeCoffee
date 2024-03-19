@@ -1,10 +1,17 @@
-import { Container } from "./styles";
+import { Container, TitleText } from "./styles";
 import { CustomerReviews } from "../../components/CustomerReview";
 
-export function Reviews(){
-    return(
+export function Reviews() {
+    return (
         <Container>
-            <CustomerReviews/>
+            <TitleText>
+                AVALIAÇÕES DOS <span>CLIENTES</span>
+            </TitleText>
+            <CustomerReviews />
+            <CustomerReviews />
+            <CustomerReviews />
+            <CustomerReviews />
+            <CustomerReviews />
         </Container>
-    )
+    );
 }
