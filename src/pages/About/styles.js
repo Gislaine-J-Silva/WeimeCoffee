@@ -8,6 +8,8 @@ export const PageWrapper = styled.div`
 
     margin-left: -8px;
     margin-right: -8px;
+
+    box-sizing: border-box;
 `;
 
 export const Container = styled.div`
@@ -24,6 +26,9 @@ export const Container = styled.div`
     > h1 {
         padding: 20px 0 ;
         text-align: center;
+        justify-content: center;
+
+        font-size: 3rem;
         color: ${({ theme }) => theme.COLORS.GREEN};
 
     }
@@ -31,6 +36,7 @@ export const Container = styled.div`
     > h1 span {
         color: ${({ theme }) => theme.COLORS.SALMON};
     }
+
 `;
 
 export const Subject = styled.div`
@@ -75,4 +81,5 @@ export const Subject = styled.div`
             text-transform: uppercase;
         }
     }
+
 `

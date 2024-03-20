@@ -1,6 +1,22 @@
 import styled from "styled-components";
 
 export const Container = styled.header`
+    * {
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        outline: none;
+        border: none;
+        text-decoration: none;
+        transition: .2s linear;
+    }
+
+    html {
+        font-size: 62.5%;
+        overflow-x: hidden;
+    }
+
     grid-area: header;
 
     display: flex;
@@ -16,6 +32,19 @@ export const Container = styled.header`
     left: 0;
     right: 0;
     z-index: 1000;
+
+    @media (max-width: 998px) {
+        html {
+            font-size: 55%;
+        }
+    }
+
+    @media (max-width: 465px) {
+    html {
+        font-size: 50%;
+    }
+
+}
 `;
 
 export const Logo = styled.div`
@@ -56,7 +85,7 @@ export const Icons = styled.button`
     > svg {
         color: ${({ theme }) => theme.COLORS.BLACK};
         cursor: pointer;
-        font-size: 2rem;
+        font-size: 2.5rem;
         padding: 7px;
 
         &:hover {
