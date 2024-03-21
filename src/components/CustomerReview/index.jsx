@@ -16,7 +16,7 @@ export function CustomerReviews() {
                         Acabei de experimentar o café desta cafeteria pela primeira vez e fiquei muito impressionado! O sabor era incrivelmente rico e a textura era perfeita - nem muito forte, nem muito fraco. Além disso, o ambiente da cafeteria era muito acolhedor e o atendimento dos funcionários foi excepcional. Fiquei muito feliz por ter encontrado este lugar e definitivamente voltarei para experimentar mais opções do cardápio.
                     </ReviewText>
                     <User src={userImg} alt="User" />
-                    <Name>Luciano Henrique</Name>
+                    <Name>Usuário Anônimo</Name>
                     <Stars>
                         <StarReview />
                         <StarReview />

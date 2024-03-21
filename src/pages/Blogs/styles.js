@@ -13,26 +13,25 @@ export const Container = styled.div`
     }
 
     background: ${({ theme }) => theme.COLORS.BACKGROUND_SALMON};
-    
     margin-left: -8px;
     margin-right: -8px;
-    
+
     padding: 0 2rem;
+
     box-sizing: border-box;
-    
+
     display: grid;
     grid-template-areas:
         "header"
-        "reviews";
+        "blog";
     gap: 15px;
-    
 `;
 
-export const Header = styled.header`
+export const BlogsText = styled.h1`
     grid-area: header;
     font-size: 3rem;
     padding: 20px 0;
-    font-weight: bold;
+    line-height: 1.8;
     color: ${({ theme }) => theme.COLORS.SALMON};
     text-transform: uppercase;
 
@@ -41,10 +40,10 @@ export const Header = styled.header`
     span {
         color: ${({ theme }) => theme.COLORS.GREEN};
     }
-`; 
+`;
 
-export const ReviewsContainer = styled.div`
-    grid-area: reviews;
+export const ContainerBlog = styled.div`
+    grid-area: blog;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
     gap: 1rem;
@@ -60,5 +59,3 @@ export const ReviewsContainer = styled.div`
         grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); 
     }
 `;
-
-

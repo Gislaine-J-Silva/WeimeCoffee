@@ -11,8 +11,6 @@ export function Reviews() {
                     <CustomerReviews />
                     <CustomerReviews />
                     <CustomerReviews />
-                    <CustomerReviews />
-                    <CustomerReviews />
                 </ReviewsContainer>
             </Container>
     );

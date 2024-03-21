@@ -4,25 +4,35 @@ export const PageWrapper = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
 
     margin-left: -8px;
     margin-right: -8px;
 
+    padding: 2rem 2rem;
+
     box-sizing: border-box;
+
+    background: ${({ theme }) => theme.COLORS.BACKGROUND_SALMON};
 `;
 
 export const Container = styled.div`
-    font-family: 'Roboto', sans-serif;
+    * {
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        outline: none;
+        border: none;
+        text-decoration: none;
+        transition: .2s linear;
+    }
 
-    height: 100vh;
-    width: 100%;
+    margin-left: -8px;
+    margin-right: -8px;
 
-    padding-right: 17px;
+    padding: 0 2rem;
 
-
-    background: ${({ theme }) => theme.COLORS.BACKGROUND_SALMON};
-
+    box-sizing: border-box;
     > h1 {
         padding: 20px 0 ;
         text-align: center;
