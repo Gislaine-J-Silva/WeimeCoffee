@@ -18,8 +18,6 @@ export const Container = styled.div`
 
     padding: 0 2rem;
 
-    box-sizing: border-box;
-
     display: grid;
     grid-template-areas:
         "header"

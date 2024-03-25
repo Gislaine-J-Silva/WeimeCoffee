@@ -54,7 +54,7 @@ export const Subject = styled.div`
     align-items: center;
     flex-wrap: wrap;
     padding: 2rem;
-    background: ${({ theme }) => theme.COLORS.GREEN};
+    background: ${({ theme }) => theme.COLORS.GREEN_MEDIUM};
 
     margin-left: 15px;
 

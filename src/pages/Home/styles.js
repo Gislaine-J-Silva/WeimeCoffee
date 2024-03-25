@@ -2,19 +2,28 @@ import styled from "styled-components";
 import background from "../../assets/backgroundHome.jpg";
 
 export const Container = styled.div`
+    * {
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        outline: none;
+        border: none;
+        text-decoration: none;
+        transition: .2s linear;
+    }
+
+
     height: 100vh;
     width: 100%;
-
-    margin-left: -10px;
-    padding-right: 18px;
-
-
     display: flex;
+
+    margin-left: -8px;
+    margin-right: -8px;
+    padding: 0 2rem;
 
     background: url(${background}) no-repeat center center;
     background-size: cover;
-
-    font-family: 'Roboto', sans-serif;
     
 `;
 

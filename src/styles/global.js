@@ -1,11 +1,21 @@
 import { createGlobalStyle } from "styled-components";
 
 
-export default createGlobalStyle`
+export const GlobalStyle = createGlobalStyle`
     * {
+        font-family: 'Roboto', sans-serif;
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+        outline: none;
+        border: none;
+        text-decoration: none;
+        transition: .2s linear;
+    }
+
+    html {
+        font-size: 62.5%;
+        overflow-x: hidden;
     }
 
     body {

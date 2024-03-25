@@ -16,7 +16,7 @@ export function Header(){
                     <a href="/about">Sobre</a>
                     <a href="/assessments">Avaliações</a>
                     <a href="/blogs">Blogs</a>
-                    <a href="/contacts">Contatos</a>
+                    <a href="/contact">Contato</a>
                 </Menu>
 
                 <Icons>
