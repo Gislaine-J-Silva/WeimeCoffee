@@ -1,12 +1,11 @@
-import { Container, Box, Image, InfoBlog } from "./styles";
+import { Box, Image, InfoBlog } from "./styles";
 import imageBlog1 from "../../assets/blog-1.jpeg";
 
 import { Button } from "../../components/Button";
 
 export function BoxBlog(){
     return(
-        <Container>
-            <Box>
+        <Box>
                 <Image>
                     <img src={imageBlog1} alt="Foto do Blog" />
                 </Image>
@@ -22,7 +21,7 @@ export function BoxBlog(){
 
                     <Button title="Saiba Mais"/>
                 </InfoBlog>
-            </Box>
-        </Container>
+        </Box>
+
     )
 }

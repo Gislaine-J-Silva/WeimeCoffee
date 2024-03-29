@@ -1,12 +1,12 @@
-import { Container, Header, ReviewsContainer } from "./styles";
+import { Container, ReviewsContainer } from "./styles";
 import { CustomerReviews } from "../../components/CustomerReview";
+
+import { TitleText } from "../../components/TitleText";
 
 export function Reviews() {
     return (
         <Container>
-                <Header>
-                    avaliações dos <span>clientes</span>
-                </Header>
+                <TitleText text="avaliações dos " highlightedWord="clientes"/>
                 <ReviewsContainer>
                     <CustomerReviews />
                     <CustomerReviews />

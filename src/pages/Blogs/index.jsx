@@ -1,12 +1,11 @@
-import { Container, BlogsText, ContainerBlog} from "./styles";
+import { Container, ContainerBlog} from "./styles";
 import { BoxBlog } from "../../components/BoxBlog";
+import { TitleText } from "../../components/TitleText";
 
 export function Blogs(){
     return(
         <Container>
-            <BlogsText>
-                    Nossos <span>Blogs </span>
-            </BlogsText>
+            <TitleText text="nossos " highlightedWord="blogs"/>
 
             <ContainerBlog>
                 <BoxBlog/>

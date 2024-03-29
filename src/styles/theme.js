@@ -3,6 +3,9 @@ export default {
         BACKGROUND_SALMON: "#F2C6AC",
         GREEN: "#6aa267",
 
+        GREEN_STRONG: "#486623",
+        SALMON_STRONG: "#D5695D",
+
         WHITE: "#F4EDE8",
         BLACK: "#010103",
         SALMON: "#DB9672",

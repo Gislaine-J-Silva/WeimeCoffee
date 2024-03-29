@@ -1,4 +1,4 @@
-import { FiSearch, FiUser, FiMenu, FiShoppingCart} from "react-icons/fi";
+import { FiUser, FiMenu, FiShoppingCart} from "react-icons/fi";
 
 import { Container, Logo, Menu, Icons } from "../Header/styles";
 import imgLogo from "../../assets/logo-removebg-preview.png"
@@ -16,13 +16,13 @@ export function Header(){
                     <a href="/about">Sobre</a>
                     <a href="/assessments">Avaliações</a>
                     <a href="/blogs">Blogs</a>
-                    <a href="/contact">Contato</a>
+                    <a href="/contact">Contatos</a>
                 </Menu>
 
                 <Icons>
-                    <FiSearch />
                     <FiUser />
                     <FiShoppingCart/>
+                    <FiMenu id="button-menu"/>
                 </Icons>
             </Container>
         </html>
