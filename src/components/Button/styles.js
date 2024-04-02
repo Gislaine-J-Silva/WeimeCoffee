@@ -10,7 +10,7 @@ export const Container = styled.button`
     font-size: 17px;
     
     color: ${({ theme }) => theme.COLORS.WHITE};
-    background: ${({ theme }) => theme.COLORS.SALMON};
+    background: ${({ theme }) => theme.COLORS.SALMON_STRONG};
     border: none;
 
     cursor: pointer;

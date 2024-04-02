@@ -20,60 +20,48 @@ export const Container = styled.header`
 `;
 
 export const Logo = styled.div`
-
-    > img {
+    img {
         height: 6rem;
     }
 `
 
-export const Menu = styled.menu`
-
-    > a {
-        margin: 0 1rem;
-        font-size: 1.6rem;
-        color: ${({ theme }) => theme.COLORS.BLACK};
-        transition: color 0.3s ease;
-        text-decoration: none;
-    }
-
-    > a:hover {
-        color: ${({ theme }) => theme.COLORS.GREEN};
-        border-bottom: .1rem solid ${({ theme }) => theme.COLORS.GREEN_STRONG} ;
-        padding-bottom: .5rem;
-    }
+export const Menu = styled.nav`
+    display: flex;
 
     @media (max-width: 768px) {
         position: absolute;
-        background: ${({ theme }) => theme.COLORS.BACKGROUND_SALMON};
+        flex-direction: column;
+        background: #010103;
         width: 100vw;
         height: 100vh;
         top: 100%;
-        right: -100%;
-
-        &:active {
-            right: 0;
-        }
-
-        > a {
-            display: grid;
-            place-content: center;
-            margin: 7%;
-            padding: 1%;
-            font-size: 4rem;
-            color: ${({ theme }) => theme.COLORS.BLACK};
-
-            &:hover {
-                color: #d3ad7f;
-                border-bottom: none;
-            }
-        }
+        right: ${({ isOpen }) => (isOpen ? '0' : '-100%')};
+        transition: right 0.3s ease;
+        background: ${({ theme }) => theme.COLORS.BACKGROUND_SALMON};
+        border-top: .1rem solid ${({ theme }) => theme.COLORS.SALMON};
     }
-    
-`
+`;
 
-export const Icons = styled.button`
-    border: none;
-    background: none;
+export const MenuItem = styled.a`
+    margin: 0 1rem;
+    font-size: 1.6rem;
+    color: ${({ theme }) => theme.COLORS.BLACK};
+    text-decoration: none;
+
+    &:hover {
+        color: ${({ theme }) => theme.COLORS.SALMON_STRONG};
+    }
+
+    @media (max-width: 768px) {
+        display: grid;
+        place-content: center;
+        margin: 7%;
+        padding: 1%;
+        font-size: 4rem;
+    }
+`;
+
+export const Icons = styled.div`
 
     > svg {
         color: ${({ theme }) => theme.COLORS.BLACK};
@@ -82,26 +70,34 @@ export const Icons = styled.button`
         margin-left: 2rem;
 
         &:hover {
-            color: ${({ theme }) => theme.COLORS.GREEN};
+            color: ${({ theme }) => theme.COLORS.SALMON_STRONG};
         }
-    }
-
-    #button-menu {
-        display: none;
     }
 
     @media (max-width: 998px) {
         padding: 1.5rem 2rem;
     }
 
-    @media (max-width: 768px) {
+`
 
-        #button-menu {
-            display: inline-block;
+export const IconMenu = styled.div`
+    display: none;
+
+    > svg {
+        color: ${({ theme }) => theme.COLORS.BLACK};
+        cursor: pointer;
+        font-size: 3rem;
+        margin-left: 2rem;
+
+        &:hover {
+            color: ${({ theme }) => theme.COLORS.SALMON_STRONG};
         }
     }
 
-`
+    @media (max-width: 768px) {
+        display: inline-block
+    }
+`;
 
 export const Cart = styled.div`
     position: absolute;

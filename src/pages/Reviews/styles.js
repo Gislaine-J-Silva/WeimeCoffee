@@ -7,7 +7,7 @@ export const Container = styled.div`
     }
 
     > h1 span {
-        color: ${({ theme }) => theme.COLORS.GREEN};
+        color: ${({ theme }) => theme.COLORS.SALMON_STRONG};
     }
 
     padding: 2rem 7%;

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Box = styled.div`
-    border: .2rem solid ${({ theme }) => theme.COLORS.GREEN};
+    border: .2rem solid ${({ theme }) => theme.COLORS.SALMON_STRONG};
 `;
 
 
@@ -30,7 +30,7 @@ export const InfoBlog = styled.div`
         line-height: 1.5;
 
         &:hover {
-            color: ${({ theme }) => theme.COLORS.GREEN};
+            color: ${({ theme }) => theme.COLORS.SALMON_STRONG};
         }
     }
 
@@ -38,7 +38,7 @@ export const InfoBlog = styled.div`
         display: block;
         padding-top: 1rem;
         font-size: 2rem;
-        color: ${({ theme }) => theme.COLORS.GREEN};
+        color: ${({ theme }) => theme.COLORS.SALMON_STRONG};
     }
 
     p {
@@ -48,7 +48,4 @@ export const InfoBlog = styled.div`
         color: ${({ theme }) => theme.COLORS.BLACK};
     } 
 
-    button {
-        background: ${({ theme }) => theme.COLORS.GREEN};
-    }
 `; 

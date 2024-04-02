@@ -1,8 +1,7 @@
 export default {
     COLORS: {
         BACKGROUND_SALMON: "#F2C6AC",
-        GREEN: "#6aa267",
-
+    
         GREEN_STRONG: "#486623",
         SALMON_STRONG: "#D5695D",
 

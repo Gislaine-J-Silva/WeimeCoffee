@@ -7,7 +7,7 @@ export const Container = styled.h1`
     padding-bottom: 3.5rem;
     padding-top: 3.5rem;
     
-    color: ${({ theme }) => theme.COLORS.GREEN};
+    color: ${({ theme }) => theme.COLORS.SALMON_STRONG};
 
     > span {
         color: ${({ theme }) => theme.COLORS.SALMON};

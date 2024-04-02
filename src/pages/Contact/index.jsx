@@ -1,10 +1,23 @@
 import { Container, Box, Map, Form, InputContainer, Icon, Input } from "./styles";
-import { FaUser, FaEnvelope, FaPhoneAlt } from "react-icons/fa"
+import { FaUser, FaEnvelope, FaPhoneAlt } from "react-icons/fa";
+import { useState } from "react";
 
 import { Button } from "../../components/Button";
 import { TitleText } from "../../components/TitleText";
+import { handleChange } from "../../components/InputValidation";
 
 export function Contact(){
+    const [inputValue, setInputValue] = useState('');
+
+    const handleLetters = (event) => {
+        const value = event.target.value;
+        
+        if (/^[a-zA-Z]+$/.test(value) || value === '') {
+        setInputValue(value);
+        }
+    };
+
+
     return(
         <Container>
             <TitleText text="nossos " highlightedWord="contatos"/>
@@ -25,6 +38,8 @@ export function Contact(){
                                     <Input
                                         type="text"
                                         placeholder="Nome"
+                                        value={inputValue}
+                                        onChange={handleLetters}
                                     />
                                 </InputContainer>
 
@@ -46,6 +61,7 @@ export function Contact(){
                                         type="phone"
                                         maxLength="15"
                                         placeholder="DDD + Número"
+                                        onChange={handleChange}
                                     />
                                 </InputContainer>
 

@@ -1,30 +1,41 @@
 import { FiUser, FiMenu, FiShoppingCart} from "react-icons/fi";
 
-import { Container, Logo, Menu, Icons } from "../Header/styles";
+import { useState } from "react";
+
+import { Container, Logo, Menu, MenuItem, Icons, IconMenu } from "../Header/styles";
 import imgLogo from "../../assets/logo-removebg-preview.png"
 
 export function Header(){
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
+    };
+    
+
     return(
-        <html>
-            <Container>
+        <Container>
                 <Logo>
                     <img src={imgLogo} alt="Logomarca" />
                 </Logo>
 
-                <Menu>
-                    <a href="/">Início</a>
-                    <a href="/about">Sobre</a>
-                    <a href="/assessments">Avaliações</a>
-                    <a href="/blogs">Blogs</a>
-                    <a href="/contact">Contatos</a>
+                <Menu isOpen={isMenuOpen}>
+                    <MenuItem href="/">Início</MenuItem>
+                    <MenuItem href="/about">Sobre</MenuItem>
+                    <MenuItem href="/assessments">Avaliações</MenuItem>
+                    <MenuItem href="/blogs">Blogs</MenuItem>
+                    <MenuItem href="/contact">Contatos</MenuItem>
                 </Menu>
 
                 <Icons>
-                    <FiUser />
+                    <FiUser/>
                     <FiShoppingCart/>
-                    <FiMenu id="button-menu"/>
+
+                    <IconMenu onClick={toggleMenu}>
+                        <FiMenu/>
+                    </IconMenu>
                 </Icons>
-            </Container>
-        </html>
+        </Container>
     )
+    
 }

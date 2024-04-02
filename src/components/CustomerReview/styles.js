@@ -3,14 +3,14 @@ import styled from "styled-components";
 export const Box = styled.div`
     padding: 3rem 2rem;
     text-align: center;
-    border: .2rem solid ${({ theme }) => theme.COLORS.GREEN};
+    border: .2rem solid ${({ theme }) => theme.COLORS.SALMON_STRONG};
 `;
 
 export const Icon = styled.div`
     svg {
         width: 58px;
         height: 43px;
-        color: ${({ theme }) => theme.COLORS.GREEN};
+        color: ${({ theme }) => theme.COLORS.SALMON_STRONG};
     }
 `;
 
@@ -28,7 +28,7 @@ export const Name = styled.h3`
 `;
 
 export const Stars = styled.div`
-    color: ${({ theme }) => theme.COLORS.GREEN};
+    color: ${({ theme }) => theme.COLORS.SALMON_STRONG};
 
     display: flex;
     flex-wrap: nowrap;

@@ -25,7 +25,7 @@ export const Form = styled.form`
     h3 {
         font-size: 3.5rem;
         text-transform: uppercase;
-        color: ${({ theme }) => theme.COLORS.GREEN};
+        color: ${({ theme }) => theme.COLORS.GREEN_STRONG};
     }
 `;
 
@@ -36,13 +36,13 @@ export const InputContainer = styled.div`
     margin-top: 2rem;
     margin-bottom: 2rem;
     color: ${({ theme }) => theme.COLORS.BLACK};
-    border: .1rem solid ${({ theme }) => theme.COLORS.GREEN};
+    border: .1rem solid ${({ theme }) => theme.COLORS.GREEN_STRONG};
 `;
 
 export const Icon = styled.div`
     font-size: 2rem;
     padding-left: 2rem;
-    color: ${({ theme }) => theme.COLORS.GREEN};
+    color: ${({ theme }) => theme.COLORS.GREEN_STRONG};
 `;
 
 export const Input = styled.input`
