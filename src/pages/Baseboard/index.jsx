@@ -1,4 +1,4 @@
-import { Container, SocialMedia, Links, Credit } from "./styles";
+import { Container, SocialMedia, Credit } from "./styles";
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaPinterest } from "react-icons/fa";
 
 export function Baseboard(){
@@ -11,14 +11,6 @@ export function Baseboard(){
                 <a><FaLinkedin/></a>
                 <a><FaPinterest/></a>
             </SocialMedia>
-
-            <Links>
-                <a href="#">Início</a>
-                <a href="#">Sobre</a>
-                <a href="#">Avaliações</a>
-                <a href="#">Blogs</a>
-                <a href="#">Contatos</a>
-            </Links>
 
             <Credit>
                 Criado por <span>Mr. Web Designer</span> & Recriado com BackEnd por <span>Gislaine J Silva</span>| Todos os direitos reservados

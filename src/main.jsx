@@ -11,6 +11,8 @@ import { Reviews } from "./pages/Reviews";
 import { Blogs } from "./pages/Blogs";
 import { Contact } from "./pages/Contact";
 import { Baseboard } from "./pages/Baseboard";
+import { Menu } from "./pages/Menu";
+import { Products } from "./pages/Products";
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -19,6 +21,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
             <GlobalStyle/>
             <Home/>
             <About/>
+            <Menu/>
+            <Products/>
             <Reviews/>
             <Blogs/>
             <Contact/>

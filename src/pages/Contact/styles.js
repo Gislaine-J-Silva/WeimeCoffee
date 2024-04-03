@@ -1,6 +1,14 @@
 import styled from "styled-components";
 
 export const Container = styled.section`
+    > h1 {
+        color: ${({ theme }) => theme.COLORS.SALMON};
+    }
+
+    > h1 span {
+        color: ${({ theme }) => theme.COLORS.SALMON_STRONG};
+    }
+    
     padding: 2rem 7%;
 `;
 

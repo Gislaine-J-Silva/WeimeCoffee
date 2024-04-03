@@ -41,27 +41,6 @@ export const SocialMedia = styled.div`
     }
 `;
 
-export const Links = styled.div`
-    grid-area: 'menu';
-    display: flex;
-    justify-content: center;
-    padding: 2rem 0;
-    flex-wrap: wrap;
-    gap: 1rem;
-
-    > a {
-        font-size: 1.7rem;
-        padding: .7rem 2rem;
-        color: ${({ theme }) => theme.COLORS.GREEN_STRONG};
-
-        &:hover {
-            color: ${({ theme }) => theme.COLORS.SALMON_STRONG};
-            border-bottom: .1rem solid ${({ theme }) => theme.COLORS.SALMON_STRONG} ;
-            padding-bottom: .5rem; 
-        }
-    }
-`;
-
 export const Credit = styled.p`
     grid-area: 'credit';
     font-size: 1.5rem;
