@@ -45,9 +45,9 @@ export function Header(){
                 </Menu>
 
                 <Icons>
-                    <FiUser/>
+                    <FiUser className="hide-icon"/>
 
-                    <FiSearch onClick={toggleSearch}/>
+                    <FiSearch onClick={toggleSearch} className="hide-icon"/>
                     <Search className={isActive ? 'active' : ''}>
                         <InputSearch type="text"/>
                         <LabelSearch>
@@ -55,7 +55,7 @@ export function Header(){
                         </LabelSearch>
                     </Search>
                     
-                    <FiShoppingCart onClick={toggleCart}/>
+                    <FiShoppingCart onClick={toggleCart} className="hide-icon"/>
                     <Cart className={isActiveCart ? 'active' : ''}>
                         <ItensCart>
                             <FiX/>
