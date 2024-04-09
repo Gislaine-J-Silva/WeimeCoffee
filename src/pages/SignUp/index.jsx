@@ -2,18 +2,25 @@ import { Container, Form, Background } from "./styles";
 
 import { Header } from "../../components/Header";
 import { Input } from "../Contact/styles";
+
 import { Button } from "../../components/Button";
 
-export function SignIn(){
+export function SignUp(){
 
     return(
         <Container>     
-            <Header id="header"/>    
+            <Header id="header"/>
+            <Background/>     
             <Form>
                     <h1>Weime Coffee</h1>
                     <p>Café fresquinho toda manhã</p>
 
-                    <h2>Faça seu login</h2>
+                    <h2>Crie sua Conta</h2>
+
+                    <Input
+                        placeholder="Nome"
+                        type="text"
+                    />
 
                     <Input
                         placeholder="E-mail"
@@ -25,11 +32,10 @@ export function SignIn(){
                         type="password"
                     />
                     
-                    <Button title="Entrar"/>
+                    <Button title="Cadastrar"/>
                     
-                    <a href="#">Criar Conta</a>
+                    <a href="#">Já possuí conta?</a>
             </Form>
-            <Background/> 
         </Container>
     )
 }

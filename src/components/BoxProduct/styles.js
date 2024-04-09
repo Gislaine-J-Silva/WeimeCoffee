@@ -4,29 +4,6 @@ export const Container = styled.div`
     text-align: center;
     padding: 2rem;
     border: .1rem solid ${({ theme }) => theme.COLORS.SALMON_STRONG};
-
-    &:hover {
-        background: ${({ theme }) => theme.COLORS.GREEN_MEDIUM}; 
-        border: .1rem solid ${({ theme }) => theme.COLORS.GREEN_STRONG};
-
-    }
-
-    &:hover > * {
-        > p, h3, i {
-            color: ${({ theme }) => theme.COLORS.GREEN_STRONG};
-        }
-
-        > a {
-            background: ${({ theme }) => theme.COLORS.GREEN_MEDIUM};
-            color: ${({ theme }) => theme.COLORS.GREEN_STRONG};
-            border: .1rem solid ${({ theme }) => theme.COLORS.GREEN_STRONG};
-
-            &:hover {
-                background: ${({ theme }) => theme.COLORS.GREEN_STRONG};
-                color: ${({ theme }) => theme.COLORS.GREEN_MEDIUM};
-            }
-        }
-    }
 `;
 
 export const BoxIcon = styled.div`
@@ -48,6 +25,12 @@ export const Icons = styled.a`
     color: ${({ theme }) => theme.COLORS.SALMON_STRONG};
 
     cursor: pointer;
+
+    &:hover {
+        background: ${({ theme }) => theme.COLORS.GREEN_MEDIUM};
+        color: ${({ theme }) => theme.COLORS.GREEN_STRONG};
+        border: .1rem solid ${({ theme }) => theme.COLORS.GREEN_STRONG};
+    }
 
 `;
 

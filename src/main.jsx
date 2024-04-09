@@ -14,6 +14,7 @@ import { Baseboard } from "./pages/Baseboard";
 import { Menu } from "./pages/Menu";
 import { Products } from "./pages/Products";
 import { SignIn } from "./pages/SignIn";
+import { SignUp } from "./pages/SignUp";
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
