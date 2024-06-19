@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { api } from "../../services/api";
+import { useNavigate } from "react-router-dom";
 
 import { Container, Form, Background } from "./styles";
 import { IoCloseSharp } from "react-icons/io5";
@@ -14,6 +15,8 @@ export function SignUp(){
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
+    const navigate = useNavigate();
+
     function handleSignUp(){
         if(!name || !email || !password){
            return alert("Preencha todos os campos.")
@@ -22,6 +25,7 @@ export function SignUp(){
         api.post("/users", { name, email, password })
         .then(() => {
             alert("Usuário cadastrado com sucesso.")
+            navigate("/");
         })
         .catch(error => {
             if(error.response){
@@ -31,7 +35,7 @@ export function SignUp(){
             }
         })
     }
-    
+
     return(
         <Container>     
             <Background/>     
