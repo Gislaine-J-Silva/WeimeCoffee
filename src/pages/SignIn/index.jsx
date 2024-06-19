@@ -1,15 +1,17 @@
 import { Container, Form, Background } from "./styles";
+import { IoCloseSharp } from "react-icons/io5";
 
-import { Header } from "../../components/Header";
 import { Input } from "../Contact/styles";
 import { Button } from "../../components/Button";
 
 export function SignIn(){
 
     return(
-        <Container>     
-            <Header id="header"/>    
+        <Container>       
             <Form>
+                    <a href="#" className="close-icon">
+                        <IoCloseSharp/>
+                    </a>
                     <h1>Weime Coffee</h1>
                     <p>Café fresquinho toda manhã</p>
 

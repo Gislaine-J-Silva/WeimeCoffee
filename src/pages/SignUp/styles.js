@@ -14,6 +14,7 @@ export const Container = styled.div`
 
 `;
 
+
 export const Form = styled.form`
     background: ${({ theme }) => theme.COLORS.BACKGROUND_SALMON};
     opacity: 0.7;
@@ -51,6 +52,8 @@ export const Form = styled.form`
         color: ${({ theme }) => theme.COLORS.BLACK};
     }
 
+    
+
     input {
         background: ${({ theme }) => theme.COLORS.SALMON};
         border-radius: 12px;
@@ -60,6 +63,10 @@ export const Form = styled.form`
 
         &::placeholder{
             color: ${({ theme }) => theme.COLORS.BLACK};
+        }
+
+        svg {
+            right: 2px;
         }
     }
 `;
