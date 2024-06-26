@@ -15,15 +15,16 @@ import { Baseboard } from "./pages/Baseboard";
 import { Menu } from "./pages/Menu";
 import { Products } from "./pages/Products";
 import { SignIn } from "./pages/SignIn";
-*/
 import { SignUp } from "./pages/SignUp";
+*/
+import { Profile } from "./pages/Profile";
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
     <React.StrictMode>
         <ThemeProvider theme={theme}>
             <GlobalStyle/>
-            <SignUp/>
+            <Profile/>
 
         </ThemeProvider>
     </React.StrictMode>

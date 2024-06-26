@@ -28,6 +28,18 @@ export const Form = styled.form`
     justify-content: center;
     align-items: center;
 
+    .close-icon-signUp {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        cursor: pointer;
+
+        svg {
+            font-size: 30px;
+            color: ${({ theme }) => theme.COLORS.SALMON_STRONG};
+        }
+    }
+
     > h1 {
         font-size: 48px;
         color: ${({ theme }) => theme.COLORS.SALMON_STRONG};
