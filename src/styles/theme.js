@@ -10,6 +10,11 @@ export default {
         SALMON: "#DB9672",
 
         GREEN_MEDIUM: "#BBC1AA",
-        SALMON_MEDIUM: "#F4BFA1"
+        SALMON_MEDIUM: "#F4BFA1",
+
+        BEGE_CLARO: "#E1D6C8",
+        BEGE_MEDIUM: "#D9CCBA",
+        CREME: "#EFE9E1",
+        CAFE: "#6F4E37"
     }
 };

@@ -21,12 +21,16 @@ export const Container = styled.header`
 
 export const Logo = styled.div`
     img {
-        height: 6rem;
+        height: 70px;
     }
 `
 
 export const Menu = styled.nav`
     display: flex;
+
+    @media (max-width: 998px) {
+        padding-left: 3rem;
+    }
 
     @media (max-width: 768px) {
         position: absolute;
@@ -62,12 +66,15 @@ export const MenuItem = styled.a`
 `;
 
 export const Icons = styled.div`
+    display: flex;
+    margin-left: 2rem;
 
     > svg {
         color: ${({ theme }) => theme.COLORS.BLACK};
         cursor: pointer;
         font-size: 2.8rem;
-        margin-left: 2rem;
+        margin-left: 8px;
+
 
         &:hover {
             color: ${({ theme }) => theme.COLORS.SALMON_STRONG};
@@ -76,7 +83,8 @@ export const Icons = styled.div`
 
 
     @media (max-width: 998px) {
-        padding: 1.5rem 2rem;
+        padding-right: 1.5rem;
+
     }
 
 `

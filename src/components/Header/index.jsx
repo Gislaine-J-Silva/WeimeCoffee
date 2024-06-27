@@ -6,7 +6,7 @@ import { Container, Logo, Search, InputSearch, Menu, MenuItem,  Icons, IconMenu,
 
 import { Button } from "../../components/Button";
 
-import imgLogo from "../../assets/logo-removebg-preview.png"
+import imgLogo from "../../assets/logo.png";
 import imgProductCart from "../../assets/Café Latte.jpg";
 
 export function Header(){

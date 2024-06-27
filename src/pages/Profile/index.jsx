@@ -1,7 +1,7 @@
 import { Container, Header, Avatar, Logout, ProfileOption, ConfigProfile } from "./styles";
 
 import image from "../../assets/mina4.jpg";
-import { RiShutDownLine } from "react-icons/ri";
+import { IoIosLogOut } from "react-icons/io";
 
 
 export function Profile(){
@@ -17,11 +17,17 @@ export function Profile(){
                 </div>
 
                 <Logout>
-                    <RiShutDownLine/>
+                    <IoIosLogOut/>
                 </Logout>
             </Header>
             <ProfileOption>
-                
+                <li><strong>Meu Perfil</strong></li>
+                <li><strong>Minhas compras</strong></li>
+                <li><strong>Favoritos</strong></li>
+                <li><strong>Histórico</strong></li>
+                <li><strong>Cupons</strong></li>
+                <li><strong>Assinatura</strong></li>
+                <li><strong>Ajuda</strong></li>
             </ProfileOption>
             <ConfigProfile/>
         </Container>

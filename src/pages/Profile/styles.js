@@ -4,9 +4,10 @@ export const Container = styled.div`
     width: 100%;
     height: 100vh;
 
-    background: ${({ theme }) => theme.COLORS.BACKGROUND_SALMON};
+    background: ${({ theme }) => theme.COLORS.CREME};
     display: grid;
     grid-template-rows: 105px auto;
+    grid-template-columns: 280px auto;
     grid-template-areas: 
         'header header'
         'content1 content2' 
@@ -14,12 +15,14 @@ export const Container = styled.div`
 `
 
 export const Header = styled.div`
-    border-bottom: .5px solid ${({ theme}) => theme.COLORS.SALMON_STRONG};
+    background: ${({ theme}) => theme.COLORS.BEGE_CLARO};
     grid-area: header;
 
     position: relative;
     display: flex;
     align-items: center;
+
+    padding-left: 25px;
 
     > div {
         display: flex;
@@ -34,7 +37,7 @@ export const Header = styled.div`
 
         strong {
             font-size: 18px;
-            color: ${({ theme }) => theme.COLORS.SALMON_STRONG};
+            color: ${({ theme }) => theme.COLORS.CAFE};
         }
     }
     
@@ -43,8 +46,7 @@ export const Header = styled.div`
 export const Avatar = styled.div`
     background-color: ${({ theme}) => theme.COLORS.WHITE};
     border-radius: 50%;
-    border: .5px solid ${({ theme}) => theme.COLORS.SALMON_STRONG};;
-    margin-left: 50px;
+    border: .5px solid ${({ theme}) => theme.COLORS.CAFE};
 
     width: 85px;
     height: 85px;
@@ -66,18 +68,42 @@ export const Logout = styled.button`
     background: none;
     margin-left: auto;
     padding-right: 50px;
+    cursor: pointer;
+
     > svg {
-        color: ${({ theme }) => theme.COLORS.SALMON_STRONG};
+        color: ${({ theme }) => theme.COLORS.CAFE};
         font-size: 36px;
     }
 `
 
 export const ProfileOption = styled.div`
-    padding: 20px;
     grid: content1;
+
+    list-style-type: none;
+    border-right: 15px solid ${({ theme }) => theme.COLORS.BEGE_CLARO}; /* Adiciona a borda direita */
+
+    padding: 100px 50px;
+
+    > li {
+        margin-bottom: 15px;
+        padding: 10px;
+
+        color: ${({ theme}) => theme.COLORS.CAFE};
+        background-color: ${({ theme}) => theme.COLORS.BEGE_CLARO};
+
+        border: transparent;
+        border-radius: 5px;
+        font-size: 15px;
+
+        &:hover {
+            background-color: ${({ theme}) => theme.COLORS.BEGE_MEDIUM};
+        }
+        
+    }
 `
 
 export const ConfigProfile = styled.div`
-    padding: 20px;
     grid: content2;
+    display: block;
+
 `
