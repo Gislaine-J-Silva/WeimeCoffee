@@ -15,6 +15,7 @@ export default {
         BEGE_CLARO: "#E1D6C8",
         BEGE_MEDIUM: "#D9CCBA",
         CREME: "#EFE9E1",
-        CAFE: "#6F4E37"
+        CAFE: "#6F4E37",
+        CASTANHO_CINZENTO: "#9E8057"
     }
 };

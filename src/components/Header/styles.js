@@ -7,7 +7,7 @@ export const Container = styled.header`
     align-items: center;
     justify-content: space-between;
 
-    background: ${({ theme }) => theme.COLORS.BACKGROUND_SALMON};
+    background: ${({ theme }) => theme.COLORS.BEGE_CLARO};
     border: .1rem solid ${({ theme }) => theme.COLORS.SALMON};
 
     padding: 1.5rem 7%;
@@ -49,11 +49,14 @@ export const Menu = styled.nav`
 export const MenuItem = styled.a`
     margin: 0 1rem;
     font-size: 1.6rem;
-    color: ${({ theme }) => theme.COLORS.BLACK};
+    color: ${({ theme }) => theme.COLORS.CASTANHO_CINZENTO};
     text-decoration: none;
+    font-style: italic;
+    font-weight: bold;
+
 
     &:hover {
-        color: ${({ theme }) => theme.COLORS.SALMON_STRONG};
+        color: ${({ theme }) => theme.COLORS.CAFE};
     }
 
     @media (max-width: 768px) {
@@ -70,14 +73,14 @@ export const Icons = styled.div`
     margin-left: 2rem;
 
     > svg {
-        color: ${({ theme }) => theme.COLORS.BLACK};
+        color: ${({ theme }) => theme.COLORS.CAFE};
         cursor: pointer;
         font-size: 2.8rem;
         margin-left: 8px;
 
 
         &:hover {
-            color: ${({ theme }) => theme.COLORS.SALMON_STRONG};
+            color: ${({ theme }) => theme.COLORS.CASTANHO_CINZENTO};
         }
     }
 
@@ -157,7 +160,7 @@ export const Cart = styled.div`
     padding: 0 1.5rem;
     top: 100%;
     right: -100%;
-    background: ${({ theme }) => theme.COLORS.BACKGROUND_SALMON};
+    background: ${({ theme }) => theme.COLORS.BEGE_CLARO};
     border: .1rem solid ${({ theme }) => theme.COLORS.SALMON};
     overflow-y: auto;
 
@@ -170,7 +173,7 @@ export const Cart = styled.div`
     }
 
     &::-webkit-scrollbar-thumb {
-        background: ${({ theme }) => theme.COLORS.SALMON};
+        background: ${({ theme }) => theme.COLORS.CAFE};
         border-radius: 4px;
     }
 
@@ -178,6 +181,7 @@ export const Cart = styled.div`
         width: 100%;
         position: relative;
         margin-bottom: 2.5rem;
+        background-color:  ${({ theme }) => theme.COLORS.CAFE};
     }
 `;
 
@@ -188,37 +192,41 @@ export const ItensCart = styled.div`
     position: relative;
     gap: 1.5rem;
 
+    &:hover{
+        background-color: ${({ theme }) => theme.COLORS.BEGE_MEDIUM};
+    }
+
     > svg {
         position: absolute;
         font-size: 2rem;
         top: 1rem;
         right: 1rem;
-        color: ${({ theme }) => theme.COLORS.SALMON_STRONG};
+        color: ${({ theme }) => theme.COLORS.CASTANHO_CINZENTO};
         cursor: pointer;
 
         &:hover{
-            color: ${({ theme }) => theme.COLORS.GREEN_STRONG};
+            color: ${({ theme }) => theme.COLORS.CAFE};
         }
     }
 
-    border: .1rem solid ${({ theme }) => theme.COLORS.SALMON_STRONG};
+    border: .2rem solid ${({ theme }) => theme.COLORS.CASTANHO_CINZENTO};
     padding: 1rem;
 `;
 
 export const Img = styled.img`
     height: 7rem;
-    border-radius: 10px;
+    border-radius: 50%;
 `;
 
 export const AddPurchase = styled.div`
     h3 {
         font-size: 2rem;
-        color: ${({ theme }) => theme.COLORS.GREEN_STRONG};
+        color: ${({ theme }) => theme.COLORS.CAFE};
         padding-bottom: .5rem;
     }
 
     > p {
         font-size: 1.5rem;
-        color: ${({ theme }) => theme.COLORS.GREEN_STRONG};
+        color: ${({ theme }) => theme.COLORS.CAFE};
     }
 `;
