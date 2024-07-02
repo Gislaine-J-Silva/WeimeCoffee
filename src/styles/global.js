@@ -13,9 +13,13 @@ export const GlobalStyle = createGlobalStyle`
         transition: .2s linear;
     }
 
-    html {
-        font-size: 62.5%;
+    html, body {
+        height: 100%; 
+        width: 100%;  
+        margin: 0; 
+        padding: 0; 
         overflow-x: hidden;
+        font-size: 62.5%;
     }
 
     body {

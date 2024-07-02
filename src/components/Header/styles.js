@@ -10,7 +10,7 @@ export const Container = styled.header`
     background: ${({ theme }) => theme.COLORS.BEGE_CLARO};
     border: .1rem solid ${({ theme }) => theme.COLORS.SALMON};
 
-    padding: 1.5rem 7%;
+    padding: 1.5rem 4rem;
     position: fixed;
     top: 0;
     left: 0;
@@ -86,9 +86,10 @@ export const Icons = styled.div`
 
 
     @media (max-width: 998px) {
-        padding-right: 1.5rem;
+        margen-right: 1.5rem;
 
     }
+
 
 `
 
