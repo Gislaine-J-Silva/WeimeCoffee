@@ -33,9 +33,10 @@ export const Content = styled.div`
 export const Title = styled.h1`
     font-size: 5rem;
     text-transform: uppercase;
+    font-family: "EB Garamond", serif;
+    text-shadow: 2px 2px 2px ${({theme}) => theme.COLORS.BLACK};
     color: ${({theme}) => theme.COLORS.CREME};
     text-align: center;
-    -webkit-text-stroke: 1px black; 
 `;
 
 export const TitleContainer = styled.div`
@@ -48,18 +49,11 @@ export const Form = styled.form`
 
     > p {
         font-size: 2rem;
-        font-weight: bold;
+        font-family: "Lato", sans-serif;
         line-height: 2;
         padding: 1rem 0;
         color: ${({theme}) => theme.COLORS.CREME};
-        -webkit-text-stroke: 1px black; 
-    }
-
-    > button {
-        background-color: ${({theme}) => theme.COLORS.CAFE};
-        color: ${({theme}) => theme.COLORS.CREME};
-        border-radius: 10px;
-        font-weight: bold;
+        text-shadow: 2px 2px 2px ${({theme}) => theme.COLORS.BLACK};
     }
 
 `;

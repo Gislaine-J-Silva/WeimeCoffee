@@ -3,7 +3,7 @@ import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
     * {
-        font-family: 'Roboto', sans-serif;
+        font-family: "Lato", sans-serif;
         margin: 0;
         padding: 0;
         box-sizing: border-box;
@@ -23,7 +23,7 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     body {
-        background-color: ${({ theme }) => theme.COLORS.BACKGROUND_SALMON};
+        background-color: ${({ theme }) => theme.COLORS.BEGE_CLARO};
         color: ${({ theme }) => theme.COLORS.BLACK};
 
         -webkit-font-smoothing: antialiased;

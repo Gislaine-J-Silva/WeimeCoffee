@@ -9,9 +9,10 @@ export const Container = styled.button`
     margin-top: 10px;
     font-size: 17px;
     
-    color: ${({ theme }) => theme.COLORS.WHITE};
-    background: ${({ theme }) => theme.COLORS.SALMON_STRONG};
+    color: ${({theme}) => theme.COLORS.CREME};
+    background: ${({ theme }) => theme.COLORS.CASTANHO_CINZENTO};
     border: none;
+    border-radius: 10px;
 
     cursor: pointer;
 

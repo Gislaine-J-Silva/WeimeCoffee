@@ -12,7 +12,7 @@ export function Home(){
                 </TitleContainer>
                 <Form>
                     <p>Que na simplicidade da vida, assim como um gole de café pela manhã, que possamos <br/>Encontrar as respostas para o nosso verdadeiro propósito, a essência do viver!</p>
-                    <Button title="Pegue o seu Agora"/>
+                    <Button title="Pegue o seu agora"/>
                 </Form>
             </Content>
         </Container>
