@@ -1,15 +1,19 @@
-import { FiUser, FiSearch, FiMenu, FiShoppingCart, FiX} from "react-icons/fi";
+import { FiUser, FiSearch, FiMenu, FiShoppingCart, FiX, FiMinus, FiPlus } from "react-icons/fi";
 
 import { useState } from "react";
+import { useCart } from "../../context/CartContext";
 
-import { Container, Logo, Search, InputSearch, Menu, MenuItem,  Icons, IconMenu, LabelSearch, Cart, ItensCart, AddPurchase, Img } from "../Header/styles";
+import { 
+    Container, Logo, Search, InputSearch, Menu, MenuItem,
+    Icons, IconMenu, LabelSearch, Cart, ItensCart, AddPurchase, Img, QuantityControl
+} from "../Header/styles";
 
 import { Button } from "../../components/Button";
 
 import imgLogo from "../../assets/logo.png";
-import imgProductCart from "../../assets/Café Latte.jpg";
+import { getImageUrl } from "../../services/api";
 
-export function Header(){
+export default function Header(){
     //useState
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isActive, setIsActive] = useState(false);
@@ -27,6 +31,8 @@ export function Header(){
     function toggleCart(){
         setIsActiveCart(!isActiveCart);
     }
+
+    const { cart, updateProductQuantity, removeFromCart  } = useCart();
 
     return(
         <Container>
@@ -57,38 +63,31 @@ export function Header(){
                     
                     <FiShoppingCart onClick={toggleCart} className="hide-icon"/>
                     <Cart className={isActiveCart ? 'active' : ''}>
-                        <ItensCart>
-                            <FiX/>
-                            <Img src={imgProductCart} alt="produto" />
-
-                            <AddPurchase>
-                                <h3>Itens do carrinho 01</h3>
-                                <p>R$ 12,50</p>
-                            </AddPurchase>
-                        </ItensCart>
-
-                        <ItensCart>
-                            <FiX/>
-                            <Img src={imgProductCart} alt="produto" />
-
-                            <AddPurchase>
-                                <h3>Itens do carrinho 01</h3>
-                                <p>R$ 12,50</p>
-                            </AddPurchase>
-                        </ItensCart>
-
-                        <ItensCart>
-                            <FiX/>
-                            <Img src={imgProductCart} alt="produto" />
-
-                            <AddPurchase>
-                                <h3>Itens do carrinho 01</h3>
-                                <p>R$ 12,50</p>
-                            </AddPurchase>
-                        </ItensCart>
-                        
-
-                        <Button title="Finalizar Pedido"/>
+                        {cart.length === 0 ? (
+                            <p className="empty-cart">O carrinho está vazio</p>
+                        ) : (
+                            cart.map((item) => (
+                                <ItensCart key={item.id}>
+                                    <FiX onClick={() => removeFromCart(item.id)} />
+                                    <Img src={getImageUrl(item.img_product)} alt={item.name} />
+                                    <AddPurchase>
+                                        <h3>{item.name}</h3>
+                                        <p>R$ {item.price.toFixed(2)}</p>
+                                    </AddPurchase>
+                                    <QuantityControl>
+                                        <FiMinus onClick={() => updateProductQuantity(item.id, item.quantity - 1)} />
+                                        <input
+                                            type="number"
+                                            value={item.quantity}
+                                            min="1"
+                                            onChange={(e) => updateProductQuantity(item.id, e.target.value)}
+                                        />
+                                        <FiPlus onClick={() => updateProductQuantity(item.id, item.quantity + 1)} />
+                                    </QuantityControl>
+                                </ItensCart>
+                            ))
+                        )}
+                        <Button title="Finalizar Pedido" />
                     </Cart>
 
                     <IconMenu onClick={toggleMenu}>

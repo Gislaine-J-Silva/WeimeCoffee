@@ -1,44 +1,42 @@
 import { Container, BoxIcon, Icons, ImgBox, Img, Box, Stars } from "./styles";
-
 import { FaShoppingCart, FaHeart , FaEye } from "react-icons/fa";
-
-import imgProduct from "../../assets/product.png";
 import { StarReview } from "../../components/StarReview";
+import { getImageUrl } from "../../services/api";
 
-export function BoxProduct(){
+export function BoxProduct({ product, onAddToCart }){
     return(
         <Container>
             <BoxIcon>
-                <Icons>
-                    <FaShoppingCart/>
-                    
+                <Icons onClick={() => onAddToCart(product)}>
+                    <FaShoppingCart />
                 </Icons>
 
                 <Icons>
-                    <FaHeart/>
+                    <FaHeart />
                 </Icons>
 
                 <Icons>
-                    <FaEye/>
+                    <FaEye />
                 </Icons>
             </BoxIcon>
 
             <ImgBox>
-                <Img src={imgProduct} alt="foto do produto"/>
+                <Img src={getImageUrl(product.img_product)} alt="foto do produto" />
             </ImgBox>
 
             <Box>
-                <h3>Café Columbia</h3>
+                <h3>{product.name}</h3>
 
                 <Stars>
-                    <StarReview/>
-                    <StarReview/>
-                    <StarReview/>
-                    <StarReview/>
-                    <StarReview/>
+                    {/* Assumindo que StarReview pode receber uma classificação */}
+                    {Array.from({ length: 5 }, (_, index) => (
+                        <StarReview key={index} active={index < product.rating} />
+                    ))}
                 </Stars>
 
-                <p>R$49,99 <span>R$65,99</span></p>
+                <p>
+                    R${product.price} <span>R$55,00</span>
+                </p>
             </Box>
         </Container>
     )

@@ -1,11 +1,9 @@
-import { Header } from "../../components/Header";
 import { Container, Content, TitleContainer, Title, Form } from "./styles";
 import { Button } from "../../components/Button";
 
 export function Home(){
     return(
         <Container>
-            <Header/>
             <Content>
                 <TitleContainer>
                     <Title>CAFÉ FRESCO DA MANHÃ</Title>

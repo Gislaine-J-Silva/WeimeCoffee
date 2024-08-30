@@ -184,6 +184,14 @@ export const Cart = styled.div`
         margin-bottom: 2.5rem;
         background-color:  ${({ theme }) => theme.COLORS.CAFE};
     }
+
+    .empty-cart {
+        text-align: center;
+        font-size: 2rem;
+        margin: 15rem 0;
+        font-family: "EB Garamond", serif;
+
+    }
 `;
 
 export const ItensCart = styled.div`
@@ -215,8 +223,10 @@ export const ItensCart = styled.div`
 `;
 
 export const Img = styled.img`
+    width: 7rem;
     height: 7rem;
     border-radius: 50%;
+    object-fit: cover;
 `;
 
 export const AddPurchase = styled.div`
@@ -229,5 +239,44 @@ export const AddPurchase = styled.div`
     > p {
         font-size: 1.5rem;
         color: ${({ theme }) => theme.COLORS.CAFE};
+    }
+`;
+
+export const QuantityControl = styled.div`
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    position: absolute;
+    top: 5rem;
+    right: 5rem;
+    
+
+    svg {
+        cursor: pointer;
+        font-size: 1.5rem;
+        color: ${({ theme }) => theme.COLORS.CAFE};
+
+        &:hover {
+            color: ${({ theme }) => theme.COLORS.CASTANHO_CINZENTO};
+        }
+    }
+
+    input {
+        width: 3rem;
+        text-align: center;
+        font-size: 1.2rem;
+        border: 1px solid ${({ theme }) => theme.COLORS.CASTANHO_CINZENTO};
+        border-radius: 0.3rem;
+        padding: 0.2rem;
+        appearance: none;
+
+
+        -moz-appearance: textfield; 
+        &::-webkit-inner-spin-button,
+        &::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
     }
 `;
