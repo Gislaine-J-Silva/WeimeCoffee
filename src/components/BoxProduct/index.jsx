@@ -35,7 +35,7 @@ export function BoxProduct({ product, onAddToCart }){
                 </Stars>
 
                 <p>
-                    R${product.price} <span>R$55,00</span>
+                    R${product.price} <span>{product.old_price}</span>
                 </p>
             </Box>
         </Container>

@@ -13,12 +13,13 @@ export const Container = styled.div`
 
     > p {
         padding: .5rem 0;
-        font-size: 2.5rem;
+        font-size: 2.3rem;
         color: ${({ theme }) => theme.COLORS.SALMON_STRONG};
 
         > span {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             text-decoration: line-through;
+            margin-left: 3px;
         }
     }
 

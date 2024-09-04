@@ -15,6 +15,16 @@ export async function fetchProducts(){
     }
 }
 
+export async function fetchMenu(){
+    try {
+        const response = await api.get("/menu");
+        return response.data;
+    } catch (error){
+        console.error("Error ao buscar produtos:", error);
+        throw error;
+    }
+}
+
 export function getImageUrl(imagePath){
     return `${api.defaults.baseURL}/files/${imagePath}`;
 }
